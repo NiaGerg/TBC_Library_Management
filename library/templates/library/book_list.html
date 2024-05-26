@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fce4ec;
+            color: #333;
+        }
+        h2 {
+            color: #e91e63;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #e91e63;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #ff80ab;
+        }
+    </style>
+</head>
+<body>
+    <h2>Book List</h2>
+    <ul>
+        {% for book in books %}
+            <li><a href="{% url 'book-detail' book.id %}">{{ book.title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

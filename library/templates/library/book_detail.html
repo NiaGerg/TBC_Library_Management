@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ book.title }}</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fce4ec;
+            color: #333;
+        }
+        h2 {
+            color: #e91e63;
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .book-info {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f8bbd0;
+        }
+        .book-info p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>{{ book.title }}</h2>
+        <div class="book-info">
+            <p>Author: {{ book.author.name }}</p>
+            <p>Genre: {{ book.genre.name }}</p>
+            <p>Date of Issue: {{ book.date_of_issue }}</p>
+            <p>Quantity in Stock: {{ book.quantity_in_stock }}</p>
+        </div>
+    </div>
+</body>
+</html>

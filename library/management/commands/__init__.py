@@ -1,0 +1,1 @@
+from .populate_dummy_data import Command as PopulateDummyDataCommand
